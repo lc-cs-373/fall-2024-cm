@@ -1,0 +1,9 @@
+# Grammar file
+skip WS '\s+'
+skip COMMENT '#.*$'
+token THIS '(?i)this'
+token THAT '(?i)that'
+token THE '(?i)the'
+token OTHER '(?i)other'
+token THING '(?i)thing'
+token ID '(^(this))'
