@@ -1,0 +1,7 @@
+token NUMBER '\d+'
+token COMMA
+token LBRACKET
+token RBRACKET
+%
+<num> ::= 
+<lon> ::= LBRACKET
