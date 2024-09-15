@@ -1,7 +1,7 @@
 token NUMBER '\d+'
-token COMMA
-token LBRACKET
-token RBRACKET
+token COMMA ',?\s'
+token LBRACKET '\['
+token RBRACKET '\]'
 %
-<num> ::= 
-<lon> ::= LBRACKET
+<num> ::= NUMBER COMMA
+<lon> ::= LBRACKET <num> RBRACKET
