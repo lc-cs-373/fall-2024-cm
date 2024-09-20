@@ -1,0 +1,8 @@
+skip WS '\s'
+token SYMBOL '[a-z]+'
+token NUM '\d+'
+token LPAREN '\('
+token RPAREN '\)'
+%
+<tree>:TreeNum  ::= <NUM>
+<tree>:TreeSome ::= LPAREN SYMBOL <tree>:leftNode <tree>:rightNode RPAREN

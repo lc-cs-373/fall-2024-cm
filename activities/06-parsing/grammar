@@ -1,0 +1,8 @@
+skip WS '\s'
+token NUMBER '\d+,?'
+token LBRACKET '\['
+token RBRACKET '\]'
+%
+<lon> ::= LBRACKET <nums> RBRACKET
+<nums>:ListNone ::= 
+<nums>:ListSome ::= NUMBER <nums>

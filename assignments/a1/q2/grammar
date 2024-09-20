@@ -5,5 +5,5 @@ token DEFINITION '\'.+\''
 skip COMMENT '#.*$'
 skip WS '\s+'
 %
-<tkn> ::=  TKN NAME DEFINITION
+<tkn> ::= TKN NAME DEFINITION
 <skp> ::= SKP NAME DEFINITION
