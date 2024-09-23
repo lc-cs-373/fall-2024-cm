@@ -1,0 +1,11 @@
+Question 3:
+    public Goo(Token var, Silly silly)
+
+Question 4:
+    public Many(List<Rule> ruleList, List<Token> ofList, List<Stuff> stuffList)
+
+Question 5:
+    public Classes(Token c1, Token c2, Token c3)
+
+Question 6:
+    <var> ::= token <foo>

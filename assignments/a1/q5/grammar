@@ -1,0 +1,7 @@
+token I 'i'
+token AM 'am'
+token TAKING 'taking'
+token AND 'and'
+token CSIT 'csit'
+%
+<classes> ::= I AM TAKING <CSIT>c1 <CSIT>c2 AND <CSIT>c3

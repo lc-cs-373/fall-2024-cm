@@ -1,0 +1,7 @@
+token THIS 'this'
+token IS 'is'
+token VAR 'var'
+token WORD 'word'
+%
+<silly> ::= WORD
+<blah>:Goo ::= THIS <VAR> IS <silly>

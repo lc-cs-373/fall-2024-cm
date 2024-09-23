@@ -1,0 +1,11 @@
+token THIS 'this'
+token BLUH 'bluh'
+token OF 'of'
+token STUFF 'stuff'
+token HAS 'has'
+token MULTIPLE 'multiple'
+token OCCURRENCES 'occurrences'
+%
+<rule> ::= BLUH
+<stuff> ::= STUFF
+<many> **= THIS <rule> HAS MULTIPLE OCCURRENCES <OF> <stuff>

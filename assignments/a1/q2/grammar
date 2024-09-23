@@ -1,5 +1,5 @@
-token TKN 'token'
-token SKP 'skip'
+token TKN '^token'
+token SKP '^skip'
 token NAME '[A-Z]+'
 token DEFINITION '\'.+\''
 skip COMMENT '#.*$'
