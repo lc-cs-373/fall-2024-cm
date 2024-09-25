@@ -1,0 +1,22 @@
+token TKN '^token'
+token SKP '^skip'
+token NAME '[A-Z]+'
+token DEFINITION '\'.+\''
+skip COMMENT '#.*$'
+skip WS '\s+'
+%
+<tkn> ::= TKN <NAME> <DEFINITION>
+<skp> ::= SKP <NAME> <DEFINITION>
+%
+Tkn
+%%%
+public String toString() {
+    return "token " + this.name.toString() + " " + this.definition.toString();
+}
+%%%
+Skp
+%%%
+public String toString() {
+    return "skip " + this.name.toString() + " " + this.definition.toString();
+}
+%%%

@@ -1,0 +1,9 @@
+token TKN '^(token)?'
+token SKP '^skip'
+token NAME '[A-Z]+'
+token DEFINITION '\'.+\''
+skip COMMENT '#.*$'
+skip WS '\s+'
+%
+<tkn> ::= TKN NAME DEFINITION
+<skp> ::= SKP NAME DEFINITION
