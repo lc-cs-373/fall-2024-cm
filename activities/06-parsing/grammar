@@ -1,8 +1,43 @@
 skip WS '\s'
-token NUMBER '\d+,?'
+token NUM '\d+,?'
 token LBRACKET '\['
 token RBRACKET '\]'
 %
 <lon> ::= LBRACKET <nums> RBRACKET
-<nums>:ListNone ::= 
-<nums>:ListSome ::= NUMBER <nums>
+<nums> **= <NUM>
+# <nums>:ListNone ::= 
+# <nums>:ListSome ::= <NUM> <nums>
+%
+Lon
+%%%
+public void $run() {
+    System.out.println(this.nums.toString());
+}
+%%%
+Nums
+%%%
+public String toString() {
+    return numList.toString();
+    // String s = "";
+    // for(Token t : this.nums) {
+    //     s += t.toString() + " ";
+    // }
+    // return s;
+
+    /* OLD METHODS
+        ListSome
+        %%%
+        public String toString() {
+            return this.num.toString() + " " + this.nums.toString();
+        }
+        %%%
+        ListNone
+        %%%
+        public String toString() {
+
+        }
+        %%%
+    */
+
+}
+%%%
