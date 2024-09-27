@@ -1,0 +1,11 @@
+skip COMMENT '#.*$'
+skip WS '\s+'
+token TKN '^token'
+token SKP '^skip'
+token NAME '[A-Z]+'
+token DEFINITION '\'.+\'$'
+%
+<valid> ::= <keyword> <NAME> <DEFINITION>
+<keyword>:T ::= TKN
+<keyword>:S ::= SKP
+<keyword>:N ::= 
