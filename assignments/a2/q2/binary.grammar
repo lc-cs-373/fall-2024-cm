@@ -1,12 +1,58 @@
 # BINARY
 # Lexical specification
+NL '\n'
+ONE '1'
+ZERO '0'
 
 %
 
 # Syntactic specification
 <start> ::= <bits> NL
 <bits>  **= <bit>
+<bit>:BinOne ::= <ONE>
+<bit>:BinZro ::= <ZERO>
 
 %
 
 # Semantic specification
+Start
+%%%
+    public void $run() {
+        System.out.println(bits.eval());
+    }
+%%%
+
+Bits
+%%%
+    public int eval() {
+        int len = bitList.size();
+        if(len == 0) throw new PLCCException("No digits found.");
+
+        int val = 0;
+        for(int i = 0; i < len; i++) {
+            int cur = bitList.get(i).eval();
+            if(cur == 0) continue;
+            val += Math.pow(2, len - i - 1);
+        }
+        return val;
+    }
+%%%
+
+Bit
+%%%
+    public abstract int eval();
+%%%
+
+BinOne
+%%%
+    public int eval() {
+        return 1;
+    }
+%%%
+
+BinZro
+%%%
+    public int eval() {
+        return 0;
+    }
+%%%
