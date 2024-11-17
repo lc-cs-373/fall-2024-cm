@@ -1,0 +1,7 @@
+let
+    x = 3
+    f = proc(x) { x; x; x }
+in {
+    .f(set x = sub1(x));
+    x
+}

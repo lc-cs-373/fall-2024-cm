@@ -1,0 +1,12 @@
+QUESTION 1:
+    SET  -> 3
+    REF  -> 4
+    NAME -> 4
+    NEED -> 4
+
+QUESTION 2:
+    SET  -> 2
+    REF  -> 2
+    NAME -> 0
+    NEED -> 2
+
