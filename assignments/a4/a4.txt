@@ -10,3 +10,11 @@ QUESTION 2:
     NAME -> 0
     NEED -> 2
 
+QUESTION 5:
+[int => int]
+(I think it basically just makes a function that outputs t^3)
+
+QUESTION 6:
+    - add1(0) does not return a bool, so the if statement fails.
+    - The return at the end of function p returns the function 
+    rather than an integer, but it's supposed to return an integer.
