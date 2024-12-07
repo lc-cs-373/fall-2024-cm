@@ -7,8 +7,17 @@ end
 define B = class extends A
   static x = 1
   % Modify to call A's bar.
-  method foo = proc() .bar(x)
+  method foo = proc() <super>.bar(x)
+  % or
+  % method foo = proc() .<super>bar(x)
   method bar = proc(x) +(x, x)
 end
 
 % Add code to test your solution
+define a = new A
+define b = new B
+
+<a>.foo()
+<a>.bar(3)
+<b>.foo()
+<b>.bar(5)
